@@ -25,7 +25,11 @@ public abstract class Persona {
         this.rfc              = rfc;
     }
 
-    public int getId_persona() {
+    public Persona() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getId_persona() {
         return id_persona;
     }
 
@@ -88,7 +92,6 @@ public abstract class Persona {
     public void setRfc(String rfc) {
         this.rfc = rfc;
     }
-    
     
     
 }
