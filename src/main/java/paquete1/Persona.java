@@ -2,7 +2,7 @@ package paquete1;
 
 public abstract class Persona {
     //Atributos
-    protected int       id_persona;
+
     protected Direccion id_direccion;
     protected String    nombre;
     protected String    apellido_paterno;
@@ -14,8 +14,8 @@ public abstract class Persona {
     //Metodos 
     
     //Metodo constructor
-    public Persona(int id_persona, Direccion id_direccion, String nombre, String apellido_paterno, String apellido_materno, int numero_Telefono, String correo, String rfc) {
-        this.id_persona       = id_persona;
+    public Persona(Direccion id_direccion, String nombre, String apellido_paterno, String apellido_materno, int numero_Telefono, String correo, String rfc) {
+
         this.id_direccion     = id_direccion;
         this.nombre           = nombre;
         this.apellido_paterno = apellido_paterno;
@@ -28,10 +28,6 @@ public abstract class Persona {
     public Persona() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public int getId_persona() {
-        return id_persona;
-    }
 
     public Direccion getId_direccion() {
         return id_direccion;
@@ -59,10 +55,6 @@ public abstract class Persona {
 
     public String getRfc() {
         return rfc;
-    }
-
-    public void setId_persona(int id_persona) {
-        this.id_persona = id_persona;
     }
 
     public void setId_direccion(Direccion id_direccion) {

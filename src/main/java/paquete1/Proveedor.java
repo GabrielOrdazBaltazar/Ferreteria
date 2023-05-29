@@ -16,7 +16,7 @@ public class Proveedor extends Persona{
     
     //Metodos
     public Proveedor(int id_proveedor, String empresa, String giro, int id_persona, Direccion id_direccion, String nombre, String apellido_paterno, String apellido_materno, int numero_Telefono, String correo, String rfc) {
-        super(id_persona, id_direccion, nombre, apellido_paterno, apellido_materno, numero_Telefono, correo, rfc);
+        super(id_direccion, nombre, apellido_paterno, apellido_materno, numero_Telefono, correo, rfc);
         this.id_proveedor = id_proveedor;
         this.empresa = empresa;
         this.giro = giro;
@@ -48,14 +48,6 @@ public class Proveedor extends Persona{
 
     public void setGiro(String giro) {
         this.giro = giro;
-    }
-
-    public int getId_persona() {
-        return id_persona;
-    }
-
-    public void setId_persona(int id_persona) {
-        this.id_persona = id_persona;
     }
 
     public Direccion getId_direccion() {
@@ -126,30 +118,36 @@ public class Proveedor extends Persona{
 		
         return DriverManager.getConnection(getCon().getUrl(), getCon().getUsu(), getCon().getCon());
     }
+	
 	public void insertProveedor (){
-		String incertar = "INSERT INTO proveedor(id_persona, id_direccion, nombre, apellido_paterno, apellido_materno, num_telefono, correo, rfc, id_proveedor, empresa, giro) "
-				+"VALUES(?,?,?,?,?,?,?,?,?,?,?);";
+		String incertar = "INSERT INTO proveedor(id_direccion, nombre, apellido_paterno, apellido_materno, num_telefono, correo, rfc, id_proveedor, empresa, giro) "
+				+"VALUES(?,?,?,?,?,?,?,?,?,?);";
 		try(
 			Connection conn = connect();
 			PreparedStatement pstmt = conn.prepareStatement(incertar, Statement.RETURN_GENERATED_KEYS)){
 			
-			 pstmt.setInt(1, getId_persona());
-			 pstmt.setInt(2, getId_persona());
-			 pstmt.setString(3, getNombre());
-			 pstmt.setString(4, getApellido_paterno());
-			 pstmt.setString(5, getApellido_materno());
-			 pstmt.setInt(6, getNumero_Telefono());
-			 pstmt.setString(7, getCorreo());
-			 pstmt.setString(8, getRfc());
-			 pstmt.setInt(9, getId_proveedor());
-			 pstmt.setString(10, getEmpresa());
-			 pstmt.setString(11, getGiro());
-			 
-			 System.out.println(pstmt);
-			 
-			 pstmt.executeUpdate();
-	         
-			 conn.close();
+			if (getId_direccion().getId_direccion()==0) {
+				System.out.println("No se encuentra esta direccion");
+				conn.close();
+			} else {
+				pstmt.setInt(1, getId_direccion().getId_direccion());
+				pstmt.setString(2, getNombre());
+				pstmt.setString(3, getApellido_paterno());
+				pstmt.setString(4, getApellido_materno());
+				pstmt.setInt(5, getNumero_Telefono());
+				pstmt.setString(6, getCorreo());
+				pstmt.setString(7, getRfc());
+				pstmt.setInt(8, getId_proveedor());
+				pstmt.setString(9, getEmpresa());
+				pstmt.setString(10, getGiro());
+			
+				System.out.println(pstmt);
+			
+				pstmt.executeUpdate();
+	        
+				conn.close();
+			}
+			
 			 
 		} catch (SQLException e) {
 			System.out.println("No se pudo conectar con la base de datos. Error: "+e.getMessage());

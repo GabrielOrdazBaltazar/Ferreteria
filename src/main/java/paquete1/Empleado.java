@@ -10,8 +10,8 @@ public class Empleado extends Persona{
     
     //Metodos
 
-    public Empleado(int id_empleado, Departamento id_departamento, double sueldo, String puesto, int id_persona, Direccion id_direccion, String nombre, String apellido_paterno, String apellido_materno, int numero_Telefono, String correo, String rfc) {
-        super(id_persona, id_direccion, nombre, apellido_paterno, apellido_materno, numero_Telefono, correo, rfc);
+    public Empleado( Departamento id_departamento, double sueldo, String puesto, int id_persona, Direccion id_direccion, String nombre, String apellido_paterno, String apellido_materno, int numero_Telefono, String correo, String rfc) {
+        super( id_direccion, nombre, apellido_paterno, apellido_materno, numero_Telefono, correo, rfc);
         this.id_empleado = id_empleado;
         this.id_departamento = id_departamento;
         this.sueldo = sueldo;
@@ -50,15 +50,6 @@ public class Empleado extends Persona{
         this.puesto = puesto;
     }
 
-    @Override
-    public int getId_persona() {
-        return id_persona;
-    }
-
-    @Override
-    public void setId_persona(int id_persona) {
-        this.id_persona = id_persona;
-    }
 
     @Override
     public Direccion getId_direccion() {

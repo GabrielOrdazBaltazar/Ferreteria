@@ -17,8 +17,8 @@ public class Direccion {
     private Conexion 	con;
     
     //Metodos
-    public Direccion(int id_direccion, String estado, String municipio, int codigo_postal, String no_exterior) {
-        this.id_direccion = id_direccion;
+    public Direccion(String estado, String municipio, int codigo_postal, String no_exterior) {
+        
         this.estado = estado;
         this.municipio = municipio;
         this.codigo_postal = codigo_postal;
@@ -81,21 +81,45 @@ public class Direccion {
 		
         return DriverManager.getConnection(getCon().getUrl(), getCon().getUsu(), getCon().getCon());
     }
+	
+	public void Obtener() {
+		int ID = 0;
+		String obtener_id = "SELECT MAX(id_direccion) FROM direccion;";
+		
+		ResultSet rs = null;
+		
+		try{
+			Connection conn = connect();
+			Statement query = conn.createStatement();
+			query.executeQuery(obtener_id);
+			
+			rs = query.getResultSet();
+			while (rs.next()){	
+				ID = rs.getInt(1);
+			}
+			
+			System.out.println(ID);
+			setId_direccion(ID+1);
+			
+			} catch (SQLException e) {
+				System.out.println("No se pudo conectar con la base de datos. Error: "+e.getMessage());
+			}
+	}
+	
 	public void insertDireccion (){
-		String incertar = "INSERT INTO direccion(id_direccion, estado, municipio, codigo_postal, no_exterior) "
-				+"VALUES(?,?,?,?,?);";
+		String incertar = "INSERT INTO direccion(estado, municipio, codigo_postal, no_exterior) "
+				+"VALUES(?,?,?,?);";
 		try(
 			Connection conn = connect();
 			PreparedStatement pstmt = conn.prepareStatement(incertar, Statement.RETURN_GENERATED_KEYS)){
-			
-			 pstmt.setInt(1, getId_direccion());
-			 pstmt.setString(2, getEstado());
-			 pstmt.setString(3, getMunicipio());
-			 pstmt.setInt(4, getCodigo_postal());
-			 pstmt.setString(5, getNo_exterior());
+
+			 pstmt.setString(1, getEstado());
+			 pstmt.setString(2, getMunicipio());
+			 pstmt.setInt(3, getCodigo_postal());
+			 pstmt.setString(4, getNo_exterior());
 			 
 			 System.out.println(pstmt);
-			 
+			 Obtener();
 			 pstmt.executeUpdate();
 	         
 			 conn.close();
