@@ -1,0 +1,168 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "InsertEmpleadoRegistros",
+            "request": "launch",
+            "mainClass": "InsertEmpleadoRegistros",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "Compras",
+            "request": "launch",
+            "mainClass": "vistas.Compras",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "DepartamentoVistaBuscar",
+            "request": "launch",
+            "mainClass": "vistas.DepartamentoVistaBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "DepartamentoVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.DepartamentoVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "DescuentoVistaBuscar",
+            "request": "launch",
+            "mainClass": "vistas.DescuentoVistaBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "DescuentoVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.DescuentoVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "DireccionVistaBuscar",
+            "request": "launch",
+            "mainClass": "vistas.DireccionVistaBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "DireccionVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.DireccionVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "EmpleadoVistaBuscar",
+            "request": "launch",
+            "mainClass": "vistas.EmpleadoVistaBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "EmpleadoVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.EmpleadoVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "FacturaCompraVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.FacturaCompraVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "Ferreteria",
+            "request": "launch",
+            "mainClass": "vistas.Ferreteria",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "HistCompraBuscar",
+            "request": "launch",
+            "mainClass": "vistas.HistCompraBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "HistCompraVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.HistCompraVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "LoginEmpleado",
+            "request": "launch",
+            "mainClass": "vistas.LoginEmpleado",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "PersonaVistaBuscar",
+            "request": "launch",
+            "mainClass": "vistas.PersonaVistaBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "PersonaVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.PersonaVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "ProductoVistaBuscar",
+            "request": "launch",
+            "mainClass": "vistas.ProductoVistaBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "ProductoVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.ProductoVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "ProveedorVistaBuscar",
+            "request": "launch",
+            "mainClass": "vistas.ProveedorVistaBuscar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "ProveedorVistaIngresar",
+            "request": "launch",
+            "mainClass": "vistas.ProveedorVistaIngresar",
+            "projectName": "Ferreteria2.0"
+        },
+        {
+            "type": "java",
+            "name": "RecursosHumanos",
+            "request": "launch",
+            "mainClass": "vistas.RecursosHumanos",
+            "projectName": "Ferreteria2.0"
+        }
+    ]
+}

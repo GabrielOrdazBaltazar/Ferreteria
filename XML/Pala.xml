@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<row>
+  <id_producto>5656</id_producto>
+  <nombre>Pala</nombre>
+  <descripcion>Mango de madera</descripcion>
+  <area_uso>Construccion, Jardineria</area_uso>
+  <precio_unitario>200</precio_unitario>
+  <marca>TruPer</marca>
+</row>
+
+</table>
